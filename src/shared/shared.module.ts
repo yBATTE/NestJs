@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 
 import { ConfigModule } from '@nestjs/config';
-import { GoogleMapsService } from './maps.service';
+import { GoogleMapsService } from './services/maps.service';
 
 const SERVICES = [GoogleMapsService];
 

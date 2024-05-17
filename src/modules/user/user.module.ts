@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Maps, MapsSchema } from './maps.schema';
-import { MapsController } from './maps.controller';
-import { MapsService } from './maps.service';
 import { SharedModule } from 'src/shared/shared.module';
+import { UsersController } from './user.controller';
+import { UsersService } from './user.service';
+import { Users, UsersSchema } from './user.schema';
 
 @Module({
   imports: [
@@ -12,12 +12,12 @@ import { SharedModule } from 'src/shared/shared.module';
     ConfigModule.forRoot(),
     MongooseModule.forFeature([
       {
-        name: Maps.name,
-        schema: MapsSchema,
+        name: Users.name,
+        schema: UsersSchema,
       },
     ]),
   ],
-  controllers: [MapsController],
-  providers: [MapsService],
+  controllers: [UsersController],
+  providers: [UsersService],
 })
-export class MapsModule {}
+export class UsersModule {}
