@@ -10,7 +10,7 @@ import { UsersModule } from './modules/user/user.module';
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     MongooseModule.forRoot(
-      'mongodb://notiwork:secret@localhost:27017/Maps?authSource=admin',
+      'mongodb://notiwork:secret@localhost:27017/Nestjs?authSource=admin',
       {
         serverSelectionTimeoutMS: 5000,
       },
